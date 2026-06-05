@@ -31,6 +31,7 @@ export function Portfolio() {
       <Skills />
       <Leadership />
       <Gallery speaking={speakingAsset.url} poster={posterAsset.url} krishi={krishiAsset.url} />
+      <CV />
       <Contact />
       <footer className="py-10 text-center text-sm text-muted-foreground border-t border-border/40">
         <p>© 2026 Partho Sarker Dhrubo · Crafted with curiosity & code</p>
