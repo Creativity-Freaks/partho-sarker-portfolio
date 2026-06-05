@@ -9,7 +9,6 @@ import { Research } from "./portfolio/Research";
 import { Skills } from "./portfolio/Skills";
 import { Gallery } from "./portfolio/Gallery";
 import { Leadership } from "./portfolio/Leadership";
-import { Leadership } from "./portfolio/Leadership";
 import { CV } from "./portfolio/CV";
 import { Contact } from "./portfolio/Contact";
 import { Nav } from "./portfolio/Nav";
