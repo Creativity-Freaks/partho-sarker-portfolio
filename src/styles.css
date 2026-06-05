@@ -147,5 +147,58 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-body);
+    background-image:
+      radial-gradient(ellipse 80% 60% at 50% -10%, oklch(0.82 0.18 160 / 0.15), transparent),
+      radial-gradient(ellipse 60% 50% at 90% 30%, oklch(0.75 0.17 200 / 0.12), transparent),
+      radial-gradient(ellipse 60% 50% at 10% 80%, oklch(0.65 0.2 280 / 0.1), transparent);
+    background-attachment: fixed;
   }
+  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+}
+
+@theme inline {
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+  --color-gold: var(--gold);
+}
+
+@utility text-gradient {
+  background: var(--gradient-aurora);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility glass {
+  background: color-mix(in oklab, var(--background) 60%, transparent);
+  backdrop-filter: blur(12px);
+  border: 1px solid color-mix(in oklab, var(--primary) 20%, transparent);
+}
+
+@utility glow {
+  box-shadow: var(--shadow-glow);
+}
+
+@keyframes float-slow {
+  0%,100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
+}
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 0.8; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes dna-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+  }
+
+.animate-float-slow { animation: float-slow 12s ease-in-out infinite; }
+.animate-pulse-ring { animation: pulse-ring 3s cubic-bezier(0.4,0,0.6,1) infinite; }
+.animate-dna-spin { animation: dna-spin 20s linear infinite; }
 }
