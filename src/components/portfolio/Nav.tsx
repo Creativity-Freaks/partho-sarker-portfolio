@@ -6,6 +6,7 @@ const links = [
   { href: "#research", label: "Research" },
   { href: "#skills", label: "Skills" },
   { href: "#leadership", label: "Leadership" },
+  { href: "#cv", label: "CV" },
   { href: "#contact", label: "Contact" },
 ];
 
