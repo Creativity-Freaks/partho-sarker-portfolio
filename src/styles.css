@@ -154,7 +154,7 @@
       radial-gradient(ellipse 60% 50% at 10% 80%, oklch(0.65 0.2 280 / 0.1), transparent);
     background-attachment: fixed;
   }
-  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: 0; }
 }
 
 @theme inline {
@@ -201,4 +201,3 @@
 .animate-float-slow { animation: float-slow 12s ease-in-out infinite; }
 .animate-pulse-ring { animation: pulse-ring 3s cubic-bezier(0.4,0,0.6,1) infinite; }
 .animate-dna-spin { animation: dna-spin 20s linear infinite; }
-}
