@@ -2,9 +2,24 @@ import { motion } from "motion/react";
 import { Linkedin, Facebook, Mail, Phone, ArrowUpRight } from "lucide-react";
 
 const socials = [
-  { icon: Linkedin, label: "LinkedIn", handle: "partho-sarker-dhrubo", href: "https://www.linkedin.com/in/partho-sarker-dhrubo/" },
-  { icon: Facebook, label: "Facebook", handle: "parthosarker.dhrubofish", href: "https://www.facebook.com/parthosarker.dhrubofish" },
-  { icon: Mail, label: "Email", handle: "parthodhrubopstu@gmail.com", href: "mailto:parthodhrubopstu@gmail.com" },
+  {
+    icon: Linkedin,
+    label: "LinkedIn",
+    handle: "partho-sarker-dhrubo",
+    href: "https://www.linkedin.com/in/partho-sarker-dhrubo/",
+  },
+  {
+    icon: Facebook,
+    label: "Facebook",
+    handle: "parthosarker.dhrubofish",
+    href: "https://www.facebook.com/parthosarker.dhrubofish",
+  },
+  {
+    icon: Mail,
+    label: "Email",
+    handle: "parthodhrubopstu@gmail.com",
+    href: "mailto:parthodhrubopstu@gmail.com",
+  },
   { icon: Phone, label: "Phone", handle: "+880 1715 771780", href: "tel:+8801715771780" },
 ];
 
@@ -25,11 +40,12 @@ export function Contact() {
           <div className="relative">
             <div className="font-mono text-xs text-primary mb-4">// 06 — LET'S CONNECT</div>
             <h2 className="text-4xl md:text-6xl font-bold leading-tight">
-              Have a research idea, a <span className="text-gradient">collaboration</span>, or just curious?
+              Have a research idea, a <span className="text-gradient">collaboration</span>, or just
+              curious?
             </h2>
             <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
-              I'm always open to conversations about bioinformatics, agricultural innovation,
-              or building things that help researchers and farmers.
+              I'm always open to conversations about bioinformatics, agricultural innovation, or
+              building things that help researchers and farmers.
             </p>
 
             <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">

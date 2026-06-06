@@ -1,18 +1,48 @@
 import { motion } from "motion/react";
-import labPotsAsset from "@/assets/lab-pots.jpeg.asset.json";
-import fieldFluorimeterAsset from "@/assets/field-fluorimeter.jpeg.asset.json";
-import labScannerAsset from "@/assets/lab-scanner.jpeg.asset.json";
-import ricePotsAsset from "@/assets/rice-pots.jpeg.asset.json";
-import fieldTeamAsset from "@/assets/field-team.jpeg.asset.json";
-import societyEventAsset from "@/assets/society-event.jpeg.asset.json";
+import labPotsAsset from "@/assets/lab-pots.jpeg";
+import fieldFluorimeterAsset from "@/assets/field-fluorimeter.jpeg";
+import labScannerAsset from "@/assets/lab-scanner.jpeg";
+import ricePotsAsset from "@/assets/rice-pots.jpeg";
+import fieldTeamAsset from "@/assets/field-team.jpeg";
+import societyEventAsset from "@/assets/society-event.jpeg";
 
 const shots = [
-  { src: labPotsAsset.url, title: "Pot experiment sampling", tag: "Greenhouse · Treatment setup", span: "md:col-span-2 md:row-span-2" },
-  { src: fieldFluorimeterAsset.url, title: "Chlorophyll fluorometry", tag: "Field · Pocket PEA", span: "md:col-span-1 md:row-span-1" },
-  { src: labScannerAsset.url, title: "Root scanning", tag: "Lab · Image analysis", span: "md:col-span-1 md:row-span-1" },
-  { src: ricePotsAsset.url, title: "Rice trait monitoring", tag: "Net-house · Phenotyping", span: "md:col-span-2 md:row-span-1" },
-  { src: fieldTeamAsset.url, title: "Field briefing with mentors", tag: "Research walk · PSTU", span: "md:col-span-1 md:row-span-1" },
-  { src: societyEventAsset.url, title: "Research Society gathering", tag: "Community · PSTU", span: "md:col-span-2 md:row-span-1" },
+  {
+    src: labPotsAsset,
+    title: "Pot experiment sampling",
+    tag: "Greenhouse · Treatment setup",
+    span: "md:col-span-2 md:row-span-2",
+  },
+  {
+    src: fieldFluorimeterAsset,
+    title: "Chlorophyll fluorometry",
+    tag: "Field · Pocket PEA",
+    span: "md:col-span-1 md:row-span-1",
+  },
+  {
+    src: labScannerAsset,
+    title: "Root scanning",
+    tag: "Lab · Image analysis",
+    span: "md:col-span-1 md:row-span-1",
+  },
+  {
+    src: ricePotsAsset,
+    title: "Rice trait monitoring",
+    tag: "Net-house · Phenotyping",
+    span: "md:col-span-2 md:row-span-1",
+  },
+  {
+    src: fieldTeamAsset,
+    title: "Field briefing with mentors",
+    tag: "Research walk · PSTU",
+    span: "md:col-span-1 md:row-span-1",
+  },
+  {
+    src: societyEventAsset,
+    title: "Research Society gathering",
+    tag: "Community · PSTU",
+    span: "md:col-span-2 md:row-span-1",
+  },
 ];
 
 export function LabField() {
@@ -34,8 +64,8 @@ export function LabField() {
             Where <span className="text-gradient">science</span> meets the soil
           </h2>
           <p className="mt-5 text-lg text-muted-foreground">
-            From pot experiments and root scanning to chlorophyll fluorometry in the paddy —
-            a glimpse into the hands-on work behind the data.
+            From pot experiments and root scanning to chlorophyll fluorometry in the paddy — a
+            glimpse into the hands-on work behind the data.
           </p>
         </motion.div>
 
@@ -59,7 +89,9 @@ export function LabField() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent opacity-90 group-hover:opacity-100 transition-opacity" />
               <figcaption className="absolute bottom-0 left-0 right-0 p-5">
-                <div className="text-[10px] font-mono text-primary uppercase tracking-widest mb-1">{s.tag}</div>
+                <div className="text-[10px] font-mono text-primary uppercase tracking-widest mb-1">
+                  {s.tag}
+                </div>
                 <div className="text-sm md:text-base font-semibold leading-tight">{s.title}</div>
               </figcaption>
               <div className="absolute top-3 right-3 h-2 w-2 rounded-full bg-primary shadow-[0_0_12px_2px] shadow-primary/60" />

@@ -2,17 +2,42 @@ import { motion } from "motion/react";
 import { Award, Users, Mic, Leaf } from "lucide-react";
 
 const items = [
-  { icon: Users, year: "2025 — present", title: "President, PSTU Research Society", body: "Leading a community of student researchers, organising programs that connect academia to industry." },
-  { icon: Mic, year: "2025", title: "Journey to Career × bdjobs", body: "Flagship program in collaboration with Bangladesh's largest job-seeking platform, helping students prepare for the workforce." },
-  { icon: Leaf, year: "2025", title: "Qamarun Agro Farm — 4th Youth Business Conference", body: "Participated in Bangladesh's youth-led agribusiness conversation." },
-  { icon: Award, year: "2026", title: "Poster presenter — 11th PTC&B Conference, DU", body: "Presented bioinformatics research on molecular docking & dynamics simulations at the University of Dhaka." },
+  {
+    icon: Users,
+    year: "2025 — present",
+    title: "President, PSTU Research Society",
+    body: "Leading a community of student researchers, organising programs that connect academia to industry.",
+  },
+  {
+    icon: Mic,
+    year: "2025",
+    title: "Journey to Career × bdjobs",
+    body: "Flagship program in collaboration with Bangladesh's largest job-seeking platform, helping students prepare for the workforce.",
+  },
+  {
+    icon: Leaf,
+    year: "2025",
+    title: "Qamarun Agro Farm — 4th Youth Business Conference",
+    body: "Participated in Bangladesh's youth-led agribusiness conversation.",
+  },
+  {
+    icon: Award,
+    year: "2026",
+    title: "Poster presenter — 11th PTC&B Conference, DU",
+    body: "Presented bioinformatics research on molecular docking & dynamics simulations at the University of Dhaka.",
+  },
 ];
 
 export function Leadership() {
   return (
     <section id="leadership" className="relative py-32 px-6">
       <div className="max-w-5xl mx-auto">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-16"
+        >
           <div className="font-mono text-xs text-primary mb-4">// 04 — JOURNEY</div>
           <h2 className="text-4xl md:text-6xl font-bold">Leadership & milestones</h2>
         </motion.div>

@@ -77,21 +77,49 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Partho Sarker Dhrubo — Bioinformatics & Agricultural Research" },
-      { name: "description", content: "Portfolio of Partho Sarker Dhrubo — researcher in bioinformatics, molecular docking, and agricultural science at PSTU." },
+      {
+        name: "description",
+        content:
+          "Portfolio of Partho Sarker Dhrubo — researcher in bioinformatics, molecular docking, and agricultural science at PSTU.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Partho Sarker Dhrubo, Bioinformatics, Researcher, Patuakhali Science and Technology University, Molecular Docking, Agriculture, Bangladesh",
+      },
       { name: "author", content: "Partho Sarker Dhrubo" },
-      { property: "og:title", content: "Partho Sarker Dhrubo" },
-      { property: "og:description", content: "Bioinformatics researcher, President of PSTU Research Society." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
+      {
+        name: "robots",
+        content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      },
+      { property: "og:title", content: "Partho Sarker Dhrubo - Bioinformatics Researcher" },
+      {
+        property: "og:description",
+        content: "Bioinformatics researcher, President of PSTU Research Society.",
+      },
+      { property: "og:type", content: "profile" },
+      { property: "og:url", content: "https://parthosarkerdhrubo.com" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Partho Sarker Dhrubo - Bioinformatics Researcher" },
+      {
+        name: "twitter:description",
+        content:
+          "Bioinformatics researcher & agricultural innovator building bridges between molecules, data, and farmers.",
+      },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
       },
+      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+      { rel: "apple-touch-icon", href: "/favicon.svg" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap",
+      },
     ],
   }),
   shellComponent: RootShell,
@@ -101,10 +129,32 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Partho Sarker Dhrubo",
+    url: "https://parthosarkerdhrubo.com",
+    jobTitle: "Bioinformatics Researcher",
+    worksFor: {
+      "@type": "Organization",
+      name: "Patuakhali Science & Technology University",
+    },
+    description:
+      "Bioinformatics researcher decoding molecular structures and engineering data-driven solutions for agricultural innovation.",
+    sameAs: [
+      "https://www.linkedin.com/in/partho-sarker-dhrubo/",
+      "https://www.facebook.com/parthosarker.dhrubofish",
+    ],
+  };
+
   return (
     <html lang="en">
       <head>
         <HeadContent />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body>
         {children}

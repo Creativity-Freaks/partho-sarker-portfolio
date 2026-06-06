@@ -6,9 +6,11 @@ export function Research({ poster, krishi }: { poster: string; krishi: string })
     {
       img: poster,
       tag: "Bioinformatics · Molecular Docking",
-      title: "Decoding structural stability & ligand binding of a hypothetical protein from Fusarium graminearum",
+      title:
+        "Decoding structural stability & ligand binding of a hypothetical protein from Fusarium graminearum",
       body: "First in-depth computational analysis of YP_001249320.1 — combining homology modelling, 250 ns MD simulations, and docking with eight flavonoid derivatives. Identified MOLPORT-003-935-831 as a top-performing binder (-8.5 kcal/mol).",
-      venue: "11th International Plant Tissue Culture & Biotechnology Conference · University of Dhaka · Jan 2026",
+      venue:
+        "11th International Plant Tissue Culture & Biotechnology Conference · University of Dhaka · Jan 2026",
       icon: FileText,
     },
     {
@@ -60,7 +62,9 @@ export function Research({ poster, krishi }: { poster: string; krishi: string })
                 </div>
                 <h3 className="text-2xl md:text-4xl font-bold leading-tight">{p.title}</h3>
                 <p className="mt-4 text-muted-foreground leading-relaxed">{p.body}</p>
-                <div className="mt-6 text-xs font-mono text-muted-foreground border-l-2 border-primary/40 pl-4">{p.venue}</div>
+                <div className="mt-6 text-xs font-mono text-muted-foreground border-l-2 border-primary/40 pl-4">
+                  {p.venue}
+                </div>
               </div>
             </motion.article>
           ))}

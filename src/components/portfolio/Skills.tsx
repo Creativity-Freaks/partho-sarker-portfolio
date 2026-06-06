@@ -4,12 +4,42 @@ const groups = [
   {
     label: "Bioinformatics",
     color: "primary",
-    items: ["NCBI-CD", "ExPASy", "InterPro", "iTOL v7.0", "PSIPRED", "BLASTp", "MEGA12", "SOPMA", "trRosetta", "Clustal Omega", "MolProbity", "SWISS-MODEL", "Subcellular localization", "Ramachandran plot"],
+    items: [
+      "NCBI-CD",
+      "ExPASy",
+      "InterPro",
+      "iTOL v7.0",
+      "PSIPRED",
+      "BLASTp",
+      "MEGA12",
+      "SOPMA",
+      "trRosetta",
+      "Clustal Omega",
+      "MolProbity",
+      "SWISS-MODEL",
+      "Subcellular localization",
+      "Ramachandran plot",
+    ],
   },
   {
     label: "Lab & Field",
     color: "accent",
-    items: ["Fluorescence chlorophyll", "Vitamin C analysis", "Moisture content", "Root scanning", "UV/VIS spectrometer", "AAS operation", "TSS estimation (chili)", "Ascorbic acid profiling", "Dose optimization", "Pot experiments", "Research design", "Sample analysis", "Treatment setup", "Trait analysis"],
+    items: [
+      "Fluorescence chlorophyll",
+      "Vitamin C analysis",
+      "Moisture content",
+      "Root scanning",
+      "UV/VIS spectrometer",
+      "AAS operation",
+      "TSS estimation (chili)",
+      "Ascorbic acid profiling",
+      "Dose optimization",
+      "Pot experiments",
+      "Research design",
+      "Sample analysis",
+      "Treatment setup",
+      "Trait analysis",
+    ],
   },
 ];
 
@@ -17,10 +47,17 @@ export function Skills() {
   return (
     <section id="skills" className="relative py-32 px-6">
       <div className="max-w-6xl mx-auto">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-16"
+        >
           <div className="font-mono text-xs text-primary mb-4">// 03 — TOOLBOX</div>
           <h2 className="text-4xl md:text-6xl font-bold">Skills & instruments</h2>
-          <p className="mt-4 text-muted-foreground max-w-2xl">A working vocabulary spanning computational pipelines and wet-lab protocols.</p>
+          <p className="mt-4 text-muted-foreground max-w-2xl">
+            A working vocabulary spanning computational pipelines and wet-lab protocols.
+          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -36,7 +73,9 @@ export function Skills() {
               <div className="flex items-center gap-3 mb-6">
                 <div className={`h-2 w-2 rounded-full bg-${g.color} animate-pulse`} />
                 <h3 className="font-display font-semibold text-xl">{g.label}</h3>
-                <span className="ml-auto text-xs font-mono text-muted-foreground">{g.items.length} tools</span>
+                <span className="ml-auto text-xs font-mono text-muted-foreground">
+                  {g.items.length} tools
+                </span>
               </div>
               <div className="flex flex-wrap gap-2">
                 {g.items.map((item, i) => (

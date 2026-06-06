@@ -1,4 +1,15 @@
-import { Dna, FlaskConical, Leaf, Atom, Microscope, TestTube2, Sprout, Beaker, Database, Network } from "lucide-react";
+import {
+  Dna,
+  FlaskConical,
+  Leaf,
+  Atom,
+  Microscope,
+  TestTube2,
+  Sprout,
+  Beaker,
+  Database,
+  Network,
+} from "lucide-react";
 
 const items = [
   { icon: Dna, label: "Molecular Docking" },
@@ -20,8 +31,7 @@ export function Marquee() {
       <div
         className="overflow-hidden"
         style={{
-          maskImage:
-            "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
+          maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
           WebkitMaskImage:
             "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
         }}

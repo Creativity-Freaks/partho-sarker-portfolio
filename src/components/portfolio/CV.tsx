@@ -1,6 +1,15 @@
 import { motion } from "motion/react";
 import { useState } from "react";
-import { FileDown, FileText, Eye, GraduationCap, FlaskConical, Award, Users, X } from "lucide-react";
+import {
+  FileDown,
+  FileText,
+  Eye,
+  GraduationCap,
+  FlaskConical,
+  Award,
+  Users,
+  X,
+} from "lucide-react";
 
 const highlights = [
   { icon: GraduationCap, label: "Education", value: "B.Sc. Agriculture — PSTU" },
@@ -8,6 +17,8 @@ const highlights = [
   { icon: Award, label: "Recent", value: "Poster — 11th PTC&B, DU 2026" },
   { icon: Users, label: "Role", value: "President, PSTU Research Society" },
 ];
+
+const cvPdfPath = "/CV%20of%20Partho%20Sarker%20Dhrubo,%20Bangladesh.pdf";
 
 export function CV() {
   const [open, setOpen] = useState(false);
@@ -36,9 +47,8 @@ export function CV() {
                 Take home the <span className="text-gradient">full story</span>
               </h2>
               <p className="mt-5 text-lg text-muted-foreground max-w-xl">
-                Research experience, projects, leadership and technical skills —
-                packaged into a clean two-page document ready for reviewers,
-                supervisors, and collaborators.
+                Research experience, projects, leadership and technical skills — packaged into a
+                clean two-page document ready for reviewers, supervisors, and collaborators.
               </p>
 
               <div className="mt-8 grid sm:grid-cols-2 gap-3">
@@ -55,7 +65,9 @@ export function CV() {
                       <h.icon className="h-4 w-4" />
                     </div>
                     <div className="min-w-0">
-                      <div className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground">{h.label}</div>
+                      <div className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground">
+                        {h.label}
+                      </div>
                       <div className="text-sm font-medium truncate">{h.value}</div>
                     </div>
                   </motion.div>
@@ -64,7 +76,7 @@ export function CV() {
 
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
-                  href="/Partho_Sarker_Dhrubo_CV.pdf"
+                  href={cvPdfPath}
                   download
                   className="group inline-flex items-center gap-3 px-7 py-3.5 rounded-full bg-primary text-primary-foreground font-semibold text-sm hover:glow transition-all"
                 >
@@ -108,9 +120,15 @@ export function CV() {
                   <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-accent to-primary animate-gradient-shift" />
 
                   <div className="relative h-full p-6 flex flex-col">
-                    <div className="text-[9px] font-mono text-primary tracking-widest">CURRICULUM VITAE</div>
-                    <div className="mt-2 font-display font-bold text-lg leading-tight text-gradient">Partho Sarker Dhrubo</div>
-                    <div className="text-[10px] text-muted-foreground mt-1">Bioinformatics · Plant Biotechnology</div>
+                    <div className="text-[9px] font-mono text-primary tracking-widest">
+                      CURRICULUM VITAE
+                    </div>
+                    <div className="mt-2 font-display font-bold text-lg leading-tight text-gradient">
+                      Partho Sarker Dhrubo
+                    </div>
+                    <div className="text-[10px] text-muted-foreground mt-1">
+                      Bioinformatics · Plant Biotechnology
+                    </div>
 
                     <div className="mt-5 space-y-2.5">
                       {[
@@ -121,9 +139,13 @@ export function CV() {
                         { w: "w-3/5", label: "Leadership" },
                       ].map((row, i) => (
                         <div key={i} className="space-y-1">
-                          <div className="text-[8px] font-mono text-primary/80 uppercase tracking-wider">{row.label}</div>
+                          <div className="text-[8px] font-mono text-primary/80 uppercase tracking-wider">
+                            {row.label}
+                          </div>
                           <div className={`h-1.5 rounded-full bg-foreground/15 ${row.w}`} />
-                          <div className={`h-1 rounded-full bg-foreground/10 ${i % 2 ? "w-4/5" : "w-2/3"}`} />
+                          <div
+                            className={`h-1 rounded-full bg-foreground/10 ${i % 2 ? "w-4/5" : "w-2/3"}`}
+                          />
                         </div>
                       ))}
                     </div>
@@ -162,11 +184,11 @@ export function CV() {
               <div className="flex items-center justify-between px-5 py-3 border-b border-border/60 bg-background/60">
                 <div className="flex items-center gap-2 text-sm font-mono">
                   <FileText className="h-4 w-4 text-primary" />
-                  Partho_Sarker_Dhrubo_CV.pdf
+                  CV of Partho Sarker Dhrubo, Bangladesh.pdf
                 </div>
                 <div className="flex items-center gap-2">
                   <a
-                    href="/Partho_Sarker_Dhrubo_CV.pdf"
+                    href={cvPdfPath}
                     download
                     className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary text-primary-foreground text-xs font-semibold hover:glow transition-all"
                   >
@@ -182,7 +204,7 @@ export function CV() {
                 </div>
               </div>
               <iframe
-                src="/Partho_Sarker_Dhrubo_CV.pdf#view=FitH"
+                src={`${cvPdfPath}#view=FitH`}
                 title="CV Preview"
                 className="flex-1 w-full bg-white"
               />

@@ -1,8 +1,8 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
-import speakingAsset from "@/assets/speaking.jpeg.asset.json";
-import posterAsset from "@/assets/poster.jpeg.asset.json";
-import krishiAsset from "@/assets/krishibondhu.jpeg.asset.json";
+import speakingAsset from "@/assets/speaking.jpeg";
+import posterAsset from "@/assets/poster.jpeg";
+import krishiAsset from "@/assets/krishibondhu.jpeg";
 import { Hero } from "./portfolio/Hero";
 import { About } from "./portfolio/About";
 import { Research } from "./portfolio/Research";
@@ -28,14 +28,14 @@ export function Portfolio() {
         className="fixed top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-accent to-primary z-50 origin-left"
       />
       <Nav />
-      <Hero speaking={speakingAsset.url} />
+      <Hero speaking={speakingAsset} />
       <About />
-      <Research poster={posterAsset.url} krishi={krishiAsset.url} />
+      <Research poster={posterAsset} krishi={krishiAsset} />
       <Marquee />
       <Skills />
       <Leadership />
       <LabField />
-      <Gallery speaking={speakingAsset.url} poster={posterAsset.url} krishi={krishiAsset.url} />
+      <Gallery speaking={speakingAsset} poster={posterAsset} krishi={krishiAsset} />
       <CV />
       <Contact />
       <footer className="relative border-t border-border/40 bg-gradient-to-b from-background to-secondary/30">
@@ -45,41 +45,70 @@ export function Portfolio() {
               <span className="text-gradient">Partho Sarker Dhrubo</span>
             </div>
             <p className="mt-3 text-sm text-muted-foreground max-w-xs">
-              Bioinformatics researcher & agricultural innovator. Building bridges between molecules, data, and farmers.
+              Bioinformatics researcher & agricultural innovator. Building bridges between
+              molecules, data, and farmers.
             </p>
           </div>
           <div>
-            <div className="text-xs font-mono uppercase tracking-widest text-primary mb-4">Contact</div>
+            <div className="text-xs font-mono uppercase tracking-widest text-primary mb-4">
+              Contact
+            </div>
             <ul className="space-y-3 text-sm">
               <li>
-                <a href="mailto:parthodhrubopstu@gmail.com" className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors">
+                <a
+                  href="mailto:parthodhrubopstu@gmail.com"
+                  className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
+                >
                   <Mail className="h-4 w-4 text-primary" /> parthodhrubopstu@gmail.com
                 </a>
               </li>
               <li>
-                <a href="tel:+8801715771780" className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors">
+                <a
+                  href="tel:+8801715771780"
+                  className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
+                >
                   <Phone className="h-4 w-4 text-primary" /> +880 1715 771780
                 </a>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
-                <MapPin className="h-4 w-4 text-primary" /> Patuakhali Science & Technology University, BD
+                <MapPin className="h-4 w-4 text-primary" /> Patuakhali Science & Technology
+                University, BD
               </li>
             </ul>
           </div>
           <div>
-            <div className="text-xs font-mono uppercase tracking-widest text-primary mb-4">Elsewhere</div>
+            <div className="text-xs font-mono uppercase tracking-widest text-primary mb-4">
+              Elsewhere
+            </div>
             <div className="flex flex-wrap gap-3">
-              <a href="https://www.linkedin.com/in/partho-sarker-dhrubo/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full glass border border-border hover:border-primary/50 hover:text-primary flex items-center justify-center transition-all">
+              <a
+                href="https://www.linkedin.com/in/partho-sarker-dhrubo/"
+                target="_blank"
+                rel="noreferrer"
+                className="w-10 h-10 rounded-full glass border border-border hover:border-primary/50 hover:text-primary flex items-center justify-center transition-all"
+              >
                 <Linkedin className="h-4 w-4" />
               </a>
-              <a href="https://www.facebook.com/parthosarker.dhrubofish" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full glass border border-border hover:border-primary/50 hover:text-primary flex items-center justify-center transition-all">
+              <a
+                href="https://www.facebook.com/parthosarker.dhrubofish"
+                target="_blank"
+                rel="noreferrer"
+                className="w-10 h-10 rounded-full glass border border-border hover:border-primary/50 hover:text-primary flex items-center justify-center transition-all"
+              >
                 <Facebook className="h-4 w-4" />
               </a>
-              <a href="mailto:parthodhrubopstu@gmail.com" className="w-10 h-10 rounded-full glass border border-border hover:border-primary/50 hover:text-primary flex items-center justify-center transition-all">
+              <a
+                href="mailto:parthodhrubopstu@gmail.com"
+                className="w-10 h-10 rounded-full glass border border-border hover:border-primary/50 hover:text-primary flex items-center justify-center transition-all"
+              >
                 <Mail className="h-4 w-4" />
               </a>
             </div>
-            <a href="/Partho_Sarker_Dhrubo_CV.pdf" download className="mt-5 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground text-xs font-semibold hover:glow transition-all">
+            <a
+              href="/CV%20of%20Partho%20Sarker%20Dhrubo,%20Bangladesh.pdf"
+              download
+              className="mt-5 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground text-xs font-semibold hover:glow transition-all"
+            >
               Download CV
             </a>
           </div>

@@ -2,9 +2,21 @@ import { motion } from "motion/react";
 import { FlaskConical, Sprout, Network } from "lucide-react";
 
 const pillars = [
-  { icon: FlaskConical, title: "In-silico research", body: "Structural biology, molecular docking, and dynamics simulations to decode hypothetical proteins." },
-  { icon: Sprout, title: "Agricultural science", body: "Field-level experimentation, physiology, and lab analysis turning data into crop insights." },
-  { icon: Network, title: "Community & leadership", body: "Building research culture as President of PSTU Research Society and connecting students with industry." },
+  {
+    icon: FlaskConical,
+    title: "In-silico research",
+    body: "Structural biology, molecular docking, and dynamics simulations to decode hypothetical proteins.",
+  },
+  {
+    icon: Sprout,
+    title: "Agricultural science",
+    body: "Field-level experimentation, physiology, and lab analysis turning data into crop insights.",
+  },
+  {
+    icon: Network,
+    title: "Community & leadership",
+    body: "Building research culture as President of PSTU Research Society and connecting students with industry.",
+  },
 ];
 
 export function About() {
@@ -20,14 +32,16 @@ export function About() {
         >
           <div className="font-mono text-xs text-primary mb-4">// 01 — ABOUT</div>
           <h2 className="text-4xl md:text-6xl font-bold leading-tight">
-            At the intersection of <span className="text-gradient">biology</span>, <span className="text-gradient">data</span>, and the <span className="text-gradient">field</span>.
+            At the intersection of <span className="text-gradient">biology</span>,{" "}
+            <span className="text-gradient">data</span>, and the{" "}
+            <span className="text-gradient">field</span>.
           </h2>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
             I'm a researcher at Patuakhali Science and Technology University working on
-            computational structural biology and applied agricultural science.
-            My recent work decoded the ligand binding mechanism of a hypothetical
-            protein from <em>Fusarium graminearum</em> through molecular docking and
-            dynamics simulations — a candidate target for next-generation antifungals.
+            computational structural biology and applied agricultural science. My recent work
+            decoded the ligand binding mechanism of a hypothetical protein from{" "}
+            <em>Fusarium graminearum</em> through molecular docking and dynamics simulations — a
+            candidate target for next-generation antifungals.
           </p>
         </motion.div>
 
