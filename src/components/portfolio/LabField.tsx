@@ -54,6 +54,7 @@ export function LabField() {
                 src={s.src}
                 alt={s.title}
                 loading="lazy"
+                onError={(e) => (e.currentTarget.src = "/placeholder.svg")}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.2s]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent opacity-90 group-hover:opacity-100 transition-opacity" />

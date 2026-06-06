@@ -23,7 +23,12 @@ export function Gallery({ speaking, poster, krishi }: { speaking: string; poster
               transition={{ duration: 0.6, delay: i * 0.1 }}
               className={`relative overflow-hidden rounded-2xl glass group ${s.span}`}
             >
-              <img src={s.src} alt={s.caption} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <img
+                src={s.src}
+                alt={s.caption}
+                onError={(e) => (e.currentTarget.src = "/placeholder.svg")}
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              />
               <figcaption className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/90 to-transparent text-xs font-mono">
                 {s.caption}
               </figcaption>

@@ -91,7 +91,7 @@ export function Hero({ speaking }: { speaking: string }) {
           className="relative"
         >
           <div className="relative aspect-[4/5] rounded-3xl overflow-hidden glass glow">
-            <img src={speaking} alt="Partho Sarker Dhrubo speaking" className="w-full h-full object-cover" />
+            <img src={speaking} alt="Partho Sarker Dhrubo speaking" onError={(e) => (e.currentTarget.src = "/placeholder.svg")} className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6">
               <div className="text-xs font-mono text-primary mb-1">// SPEAKING @ BDJOBS x PSTU</div>

@@ -45,7 +45,12 @@ export function Research({ poster, krishi }: { poster: string; krishi: string })
               className={`grid md:grid-cols-2 gap-8 items-center ${i % 2 ? "md:[&>*:first-child]:order-2" : ""}`}
             >
               <div className="relative aspect-[4/5] md:aspect-[3/4] rounded-2xl overflow-hidden glass group">
-                <img src={p.img} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img
+                  src={p.img}
+                  alt={p.title}
+                  onError={(e) => (e.currentTarget.src = "/placeholder.svg")}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
               </div>
               <div>
