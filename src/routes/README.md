@@ -19,3 +19,7 @@ is `src/routes/__root.tsx`.
 | `__root.tsx` | app shell — wraps every page; preserve `<Outlet />` |
 
 `routeTree.gen.ts` is auto-generated. Don't edit it by hand.
+
+## Layouts
+Layouts are defined by creating a `_layout.tsx` file in the same directory as the routes you want to wrap. For example, `src/routes/users/_layout.tsx`
+will wrap all routes in `src/routes/users/`. Layouts can be nested, so you can have a `_layout.tsx` in `src/routes/` that wraps all routes, and another `_layout.tsx` in `src/routes/users/` that wraps just the user routes.
