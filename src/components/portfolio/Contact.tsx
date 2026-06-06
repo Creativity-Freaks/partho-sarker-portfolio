@@ -1,10 +1,11 @@
 import { motion } from "motion/react";
-import { Linkedin, Facebook, Mail, ArrowUpRight } from "lucide-react";
+import { Linkedin, Facebook, Mail, Phone, ArrowUpRight } from "lucide-react";
 
 const socials = [
   { icon: Linkedin, label: "LinkedIn", handle: "partho-sarker-dhrubo", href: "https://www.linkedin.com/in/partho-sarker-dhrubo/" },
   { icon: Facebook, label: "Facebook", handle: "parthosarker.dhrubofish", href: "https://www.facebook.com/parthosarker.dhrubofish" },
-  { icon: Mail, label: "Email", handle: "Let's talk research", href: "mailto:partho.dhrubo@pstu.ac.bd" },
+  { icon: Mail, label: "Email", handle: "parthodhrubopstu@gmail.com", href: "mailto:parthodhrubopstu@gmail.com" },
+  { icon: Phone, label: "Phone", handle: "+880 1715 771780", href: "tel:+8801715771780" },
 ];
 
 export function Contact() {
@@ -31,7 +32,7 @@ export function Contact() {
               or building things that help researchers and farmers.
             </p>
 
-            <div className="mt-10 grid sm:grid-cols-3 gap-4">
+            <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {socials.map((s) => (
                 <a
                   key={s.label}

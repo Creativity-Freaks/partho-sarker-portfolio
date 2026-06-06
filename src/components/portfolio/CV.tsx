@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
-import { FileDown, FileText, Eye, GraduationCap, FlaskConical, Award, Users } from "lucide-react";
+import { useState } from "react";
+import { FileDown, FileText, Eye, GraduationCap, FlaskConical, Award, Users, X } from "lucide-react";
 
 const highlights = [
   { icon: GraduationCap, label: "Education", value: "B.Sc. Agriculture — PSTU" },
@@ -9,6 +10,7 @@ const highlights = [
 ];
 
 export function CV() {
+  const [open, setOpen] = useState(false);
   return (
     <section id="cv" className="relative py-32 px-6 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
@@ -69,15 +71,14 @@ export function CV() {
                   <FileDown className="h-5 w-5 group-hover:translate-y-0.5 transition-transform" />
                   Download CV (PDF)
                 </a>
-                <a
-                  href="/Partho_Sarker_Dhrubo_CV.pdf"
-                  target="_blank"
-                  rel="noreferrer"
+                <button
+                  type="button"
+                  onClick={() => setOpen(true)}
                   className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-border hover:border-primary/50 hover:bg-white/5 font-medium text-sm transition-all"
                 >
                   <Eye className="h-4 w-4" />
                   Preview Online
-                </a>
+                </button>
               </div>
 
               <div className="mt-6 flex items-center gap-2 text-xs text-muted-foreground">
@@ -148,6 +149,46 @@ export function CV() {
             </div>
           </div>
         </motion.div>
+
+        {open && (
+          <div
+            className="fixed inset-0 z-[60] flex items-center justify-center bg-background/85 backdrop-blur-md p-4 md:p-8 animate-fade-in"
+            onClick={() => setOpen(false)}
+          >
+            <div
+              onClick={(e) => e.stopPropagation()}
+              className="relative w-full max-w-5xl h-[88vh] rounded-2xl overflow-hidden border border-border glass shadow-2xl flex flex-col"
+            >
+              <div className="flex items-center justify-between px-5 py-3 border-b border-border/60 bg-background/60">
+                <div className="flex items-center gap-2 text-sm font-mono">
+                  <FileText className="h-4 w-4 text-primary" />
+                  Partho_Sarker_Dhrubo_CV.pdf
+                </div>
+                <div className="flex items-center gap-2">
+                  <a
+                    href="/Partho_Sarker_Dhrubo_CV.pdf"
+                    download
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary text-primary-foreground text-xs font-semibold hover:glow transition-all"
+                  >
+                    <FileDown className="h-3.5 w-3.5" /> Download
+                  </a>
+                  <button
+                    onClick={() => setOpen(false)}
+                    aria-label="Close preview"
+                    className="w-8 h-8 rounded-full border border-border hover:border-primary/50 hover:bg-white/5 flex items-center justify-center transition-all"
+                  >
+                    <X className="h-4 w-4" />
+                  </button>
+                </div>
+              </div>
+              <iframe
+                src="/Partho_Sarker_Dhrubo_CV.pdf#view=FitH"
+                title="CV Preview"
+                className="flex-1 w-full bg-white"
+              />
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

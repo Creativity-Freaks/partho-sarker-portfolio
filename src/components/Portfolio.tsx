@@ -13,6 +13,8 @@ import { LabField } from "./portfolio/LabField";
 import { CV } from "./portfolio/CV";
 import { Contact } from "./portfolio/Contact";
 import { Nav } from "./portfolio/Nav";
+import { Marquee } from "./portfolio/Marquee";
+import { Mail, Phone, Linkedin, Facebook, MapPin } from "lucide-react";
 
 export function Portfolio() {
   const ref = useRef<HTMLDivElement>(null);
@@ -29,14 +31,62 @@ export function Portfolio() {
       <Hero speaking={speakingAsset.url} />
       <About />
       <Research poster={posterAsset.url} krishi={krishiAsset.url} />
+      <Marquee />
       <Skills />
       <Leadership />
       <LabField />
       <Gallery speaking={speakingAsset.url} poster={posterAsset.url} krishi={krishiAsset.url} />
       <CV />
       <Contact />
-      <footer className="py-10 text-center text-sm text-muted-foreground border-t border-border/40">
-        <p>© 2026 Partho Sarker Dhrubo · Crafted with curiosity & code</p>
+      <footer className="relative border-t border-border/40 bg-gradient-to-b from-background to-secondary/30">
+        <div className="max-w-6xl mx-auto px-6 py-14 grid gap-10 md:grid-cols-3">
+          <div>
+            <div className="font-display text-2xl font-bold tracking-tight">
+              <span className="text-gradient">Partho Sarker Dhrubo</span>
+            </div>
+            <p className="mt-3 text-sm text-muted-foreground max-w-xs">
+              Bioinformatics researcher & agricultural innovator. Building bridges between molecules, data, and farmers.
+            </p>
+          </div>
+          <div>
+            <div className="text-xs font-mono uppercase tracking-widest text-primary mb-4">Contact</div>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <a href="mailto:parthodhrubopstu@gmail.com" className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors">
+                  <Mail className="h-4 w-4 text-primary" /> parthodhrubopstu@gmail.com
+                </a>
+              </li>
+              <li>
+                <a href="tel:+8801715771780" className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors">
+                  <Phone className="h-4 w-4 text-primary" /> +880 1715 771780
+                </a>
+              </li>
+              <li className="flex items-center gap-3 text-muted-foreground">
+                <MapPin className="h-4 w-4 text-primary" /> Patuakhali Science & Technology University, BD
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div className="text-xs font-mono uppercase tracking-widest text-primary mb-4">Elsewhere</div>
+            <div className="flex flex-wrap gap-3">
+              <a href="https://www.linkedin.com/in/partho-sarker-dhrubo/" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full glass border border-border hover:border-primary/50 hover:text-primary flex items-center justify-center transition-all">
+                <Linkedin className="h-4 w-4" />
+              </a>
+              <a href="https://www.facebook.com/parthosarker.dhrubofish" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full glass border border-border hover:border-primary/50 hover:text-primary flex items-center justify-center transition-all">
+                <Facebook className="h-4 w-4" />
+              </a>
+              <a href="mailto:parthodhrubopstu@gmail.com" className="w-10 h-10 rounded-full glass border border-border hover:border-primary/50 hover:text-primary flex items-center justify-center transition-all">
+                <Mail className="h-4 w-4" />
+              </a>
+            </div>
+            <a href="/Partho_Sarker_Dhrubo_CV.pdf" download className="mt-5 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground text-xs font-semibold hover:glow transition-all">
+              Download CV
+            </a>
+          </div>
+        </div>
+        <div className="border-t border-border/40 py-5 text-center text-xs text-muted-foreground">
+          © 2026 Partho Sarker Dhrubo · Crafted with curiosity & code
+        </div>
       </footer>
     </div>
   );
