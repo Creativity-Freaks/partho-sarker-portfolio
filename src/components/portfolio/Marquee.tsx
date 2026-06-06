@@ -16,17 +16,17 @@ const items = [
 export function Marquee() {
   const row = [...items, ...items];
   return (
-    <section className="relative py-16 overflow-hidden border-y border-border/40 bg-gradient-to-r from-background via-secondary/30 to-background">
+    <section className="relative py-14 overflow-hidden border-y border-border/40 bg-gradient-to-r from-background via-secondary/30 to-background">
       <div
-        className="pointer-events-none absolute inset-0"
+        className="overflow-hidden"
         style={{
           maskImage:
-            "linear-gradient(to right, transparent, black 12%, black 88%, transparent)",
+            "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
           WebkitMaskImage:
-            "linear-gradient(to right, transparent, black 12%, black 88%, transparent)",
+            "linear-gradient(to right, transparent, black 10%, black 90%, transparent)",
         }}
       >
-        <div className="flex gap-10 animate-marquee whitespace-nowrap py-2">
+        <div className="flex gap-6 animate-marquee whitespace-nowrap w-max">
           {row.map((it, i) => (
             <div
               key={i}
@@ -43,7 +43,6 @@ export function Marquee() {
           ))}
         </div>
       </div>
-      <div className="h-16" />
     </section>
   );
 }
