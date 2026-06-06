@@ -76,35 +76,42 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Partho Sarker Dhrubo — Bioinformatics & Agricultural Research" },
+      { title: "Partho Sarker Dhrubo — Soil & Molecular Biology Researcher" },
       {
         name: "description",
         content:
-          "Portfolio of Partho Sarker Dhrubo — researcher in bioinformatics, molecular docking, and agricultural science at PSTU.",
+          "Portfolio of Partho Sarker Dhrubo — graduate researcher in soil science, molecular biology, bioinformatics, and coastal agricultural stress mitigation.",
       },
       {
         name: "keywords",
         content:
-          "Partho Sarker Dhrubo, Bioinformatics, Researcher, Patuakhali Science and Technology University, Molecular Docking, Agriculture, Bangladesh",
+          "Partho Sarker Dhrubo, Soil Science, Molecular Biology, Bioinformatics, Researcher, Patuakhali Science and Technology University, Silicon Mitigation, Coastal Agriculture, Bangladesh",
       },
       { name: "author", content: "Partho Sarker Dhrubo" },
       {
         name: "robots",
         content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       },
-      { property: "og:title", content: "Partho Sarker Dhrubo - Bioinformatics Researcher" },
+      {
+        property: "og:title",
+        content: "Partho Sarker Dhrubo - Soil & Molecular Biology Researcher",
+      },
       {
         property: "og:description",
-        content: "Bioinformatics researcher, President of PSTU Research Society.",
+        content:
+          "Graduate researcher in soil science, molecular biology, bioinformatics, and agricultural stress mitigation.",
       },
       { property: "og:type", content: "profile" },
       { property: "og:url", content: "https://parthosarkerdhrubo.com" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Partho Sarker Dhrubo - Bioinformatics Researcher" },
+      {
+        name: "twitter:title",
+        content: "Partho Sarker Dhrubo - Soil & Molecular Biology Researcher",
+      },
       {
         name: "twitter:description",
         content:
-          "Bioinformatics researcher & agricultural innovator building bridges between molecules, data, and farmers.",
+          "Graduate researcher connecting coastal agriculture, silicon mitigation, molecular biology, and bioinformatics.",
       },
     ],
     links: [
@@ -134,13 +141,13 @@ function RootShell({ children }: { children: ReactNode }) {
     "@type": "Person",
     name: "Partho Sarker Dhrubo",
     url: "https://parthosarkerdhrubo.com",
-    jobTitle: "Bioinformatics Researcher",
+    jobTitle: "Graduate Researcher, Soil & Molecular Biology",
     worksFor: {
       "@type": "Organization",
       name: "Patuakhali Science & Technology University",
     },
     description:
-      "Bioinformatics researcher decoding molecular structures and engineering data-driven solutions for agricultural innovation.",
+      "Graduate researcher connecting coastal agriculture, silicon mitigation, molecular biology, and bioinformatics.",
     sameAs: [
       "https://www.linkedin.com/in/partho-sarker-dhrubo/",
       "https://www.facebook.com/parthosarker.dhrubofish",

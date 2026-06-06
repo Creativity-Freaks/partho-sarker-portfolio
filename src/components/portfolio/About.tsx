@@ -4,18 +4,18 @@ import { FlaskConical, Sprout, Network } from "lucide-react";
 const pillars = [
   {
     icon: FlaskConical,
-    title: "In-silico research",
-    body: "Structural biology, molecular docking, and dynamics simulations to decode hypothetical proteins.",
+    title: "Molecular biology",
+    body: "In-silico structural and functional protein characterization through modelling, docking, MSA, and sequence analysis.",
   },
   {
     icon: Sprout,
     title: "Agricultural science",
-    body: "Field-level experimentation, physiology, and lab analysis turning data into crop insights.",
+    body: "Coastal saline soil, nutrient management, silicon mitigation, pot experiments, and trait analysis.",
   },
   {
     icon: Network,
     title: "Community & leadership",
-    body: "Building research culture as President of PSTU Research Society and connecting students with industry.",
+    body: "Founding President of PSTU Research Society and Co-founder of Bioinformatics Club, PSTU.",
   },
 ];
 
@@ -37,11 +37,10 @@ export function About() {
             <span className="text-gradient">field</span>.
           </h2>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-            I'm a researcher at Patuakhali Science and Technology University working on
-            computational structural biology and applied agricultural science. My recent work
-            decoded the ligand binding mechanism of a hypothetical protein from{" "}
-            <em>Fusarium graminearum</em> through molecular docking and dynamics simulations — a
-            candidate target for next-generation antifungals.
+            I'm a B.Sc. Agriculture graduate from Patuakhali Science and Technology University,
+            working at the meeting point of soil science, molecular biology, and bioinformatics. My
+            CV now spans BAS-USDA funded coastal soil research, silicon-mediated crop stress
+            mitigation, protein characterization, publications, and student research leadership.
           </p>
         </motion.div>
 

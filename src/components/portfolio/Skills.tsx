@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 const groups = [
   {
     label: "Bioinformatics",
-    color: "primary",
+    dotClass: "bg-primary",
     items: [
       "NCBI-CD",
       "ExPASy",
@@ -19,11 +19,14 @@ const groups = [
       "SWISS-MODEL",
       "Subcellular localization",
       "Ramachandran plot",
+      "Multiple sequence alignment",
+      "Structural modelling",
+      "Molecular docking",
     ],
   },
   {
     label: "Lab & Field",
-    color: "accent",
+    dotClass: "bg-accent",
     items: [
       "Fluorescence chlorophyll",
       "Vitamin C analysis",
@@ -39,6 +42,25 @@ const groups = [
       "Sample analysis",
       "Treatment setup",
       "Trait analysis",
+      "Silicon mitigation",
+      "Chemical analysis",
+      "Data analysis",
+    ],
+  },
+  {
+    label: "Professional",
+    dotClass: "bg-gold",
+    items: [
+      "Basic R programming",
+      "Zotero",
+      "EndNote",
+      "Graphic design",
+      "Photoshop",
+      "AI tools",
+      "Pesticide application technology",
+      "Youth wellbeing facilitation",
+      "Business case study",
+      "IELTS 7.0",
     ],
   },
 ];
@@ -60,7 +82,7 @@ export function Skills() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-3 gap-8">
           {groups.map((g, gi) => (
             <motion.div
               key={g.label}
@@ -71,7 +93,7 @@ export function Skills() {
               className="glass rounded-2xl p-8"
             >
               <div className="flex items-center gap-3 mb-6">
-                <div className={`h-2 w-2 rounded-full bg-${g.color} animate-pulse`} />
+                <div className={`h-2 w-2 rounded-full ${g.dotClass} animate-pulse`} />
                 <h3 className="font-display font-semibold text-xl">{g.label}</h3>
                 <span className="ml-auto text-xs font-mono text-muted-foreground">
                   {g.items.length} tools

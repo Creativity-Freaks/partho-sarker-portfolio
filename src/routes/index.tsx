@@ -4,17 +4,20 @@ import { Portfolio } from "@/components/Portfolio";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Partho Sarker Dhrubo — Bioinformatics Researcher" },
+      { title: "Partho Sarker Dhrubo — Soil & Molecular Biology Researcher" },
       {
         name: "description",
         content:
-          "Bioinformatics researcher, molecular docking specialist, and President of PSTU Research Society. Bridging computational biology with agricultural innovation.",
+          "Graduate researcher in soil science, molecular biology, bioinformatics, and coastal agricultural stress mitigation; Founding President of PSTU Research Society.",
       },
-      { property: "og:title", content: "Partho Sarker Dhrubo — Bioinformatics Researcher" },
+      {
+        property: "og:title",
+        content: "Partho Sarker Dhrubo — Soil & Molecular Biology Researcher",
+      },
       {
         property: "og:description",
         content:
-          "Bioinformatics researcher, molecular docking specialist, and President of PSTU Research Society.",
+          "Graduate researcher in soil science, molecular biology, bioinformatics, and coastal agricultural stress mitigation.",
       },
     ],
   }),

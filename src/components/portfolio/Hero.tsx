@@ -37,7 +37,9 @@ export function Hero({ speaking }: { speaking: string }) {
               <span className="absolute inline-flex h-full w-full rounded-full bg-primary animate-pulse-ring" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
             </span>
-            <span className="text-muted-foreground">Available for research collaborations</span>
+            <span className="text-muted-foreground">
+              Open to scholarship & research opportunities
+            </span>
           </motion.div>
 
           <motion.h1
@@ -57,8 +59,9 @@ export function Hero({ speaking }: { speaking: string }) {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mt-6 text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed"
           >
-            Bioinformatics researcher decoding molecular structures and engineering data-driven
-            solutions for <span className="text-foreground">agricultural innovation</span>.
+            Graduate researcher in soil & molecular biology working across coastal agriculture,
+            silicon stress mitigation, and{" "}
+            <span className="text-foreground">bioinformatics-driven discovery</span>.
           </motion.p>
 
           <motion.div
@@ -92,8 +95,8 @@ export function Hero({ speaking }: { speaking: string }) {
           >
             {[
               { n: "15+", l: "Bioinformatics tools" },
-              { n: "1st", l: "Author, intl. conference" },
-              { n: "President", l: "PSTU Research Society" },
+              { n: "IELTS 7", l: "English proficiency" },
+              { n: "4", l: "Papers & manuscripts" },
             ].map((s) => (
               <div key={s.l}>
                 <div className="text-2xl md:text-3xl font-display font-bold text-gradient">

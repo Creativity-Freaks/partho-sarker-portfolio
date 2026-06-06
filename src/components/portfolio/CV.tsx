@@ -12,10 +12,10 @@ import {
 } from "lucide-react";
 
 const highlights = [
-  { icon: GraduationCap, label: "Education", value: "B.Sc. Agriculture — PSTU" },
-  { icon: FlaskConical, label: "Focus", value: "Bioinformatics · Plant Biotech" },
-  { icon: Award, label: "Recent", value: "Poster — 11th PTC&B, DU 2026" },
-  { icon: Users, label: "Role", value: "President, PSTU Research Society" },
+  { icon: GraduationCap, label: "Education", value: "B.Sc. Agriculture · CGPA 3.547" },
+  { icon: FlaskConical, label: "Focus", value: "Soil & Molecular Biology" },
+  { icon: Award, label: "Output", value: "Published + under-review papers" },
+  { icon: Users, label: "Role", value: "Founding President · PSTURS" },
 ];
 
 const cvPdfPath = "/CV%20of%20Partho%20Sarker%20Dhrubo,%20Bangladesh.pdf";
@@ -35,7 +35,7 @@ export function CV() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="glass rounded-3xl p-8 md:p-14 relative overflow-hidden"
+          className="rounded-3xl border border-primary/20 bg-background/60 p-8 backdrop-blur-xl md:p-14 relative overflow-hidden"
         >
           <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-primary/20 blur-3xl" />
           <div className="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-accent/20 blur-3xl" />
@@ -47,8 +47,9 @@ export function CV() {
                 Take home the <span className="text-gradient">full story</span>
               </h2>
               <p className="mt-5 text-lg text-muted-foreground max-w-xl">
-                Research experience, projects, leadership and technical skills — packaged into a
-                clean two-page document ready for reviewers, supervisors, and collaborators.
+                Research experience, publications, projects, awards, language score, and leadership
+                work — packaged into the latest four-page CV for scholarship reviewers, supervisors,
+                and collaborators.
               </p>
 
               <div className="mt-8 grid sm:grid-cols-2 gap-3">
@@ -78,7 +79,7 @@ export function CV() {
                 <a
                   href={cvPdfPath}
                   download
-                  className="group inline-flex items-center gap-3 px-7 py-3.5 rounded-full bg-primary text-primary-foreground font-semibold text-sm hover:glow transition-all"
+                  className="group inline-flex items-center gap-3 px-7 py-3.5 rounded-full bg-primary text-primary-foreground font-semibold text-sm hover:shadow-[var(--shadow-glow)] transition-all"
                 >
                   <FileDown className="h-5 w-5 group-hover:translate-y-0.5 transition-transform" />
                   Download CV (PDF)
@@ -95,7 +96,7 @@ export function CV() {
 
               <div className="mt-6 flex items-center gap-2 text-xs text-muted-foreground">
                 <FileText className="h-3.5 w-3.5" />
-                <span>2 pages · Last updated June 2026</span>
+                <span>4 pages · Last updated June 2026</span>
               </div>
             </div>
 
@@ -162,7 +163,7 @@ export function CV() {
                   animate={{ y: [0, -8, 0] }}
                   transition={{ duration: 3, repeat: Infinity }}
                   style={{ transform: "translateZ(40px)" }}
-                  className="absolute -top-4 -right-4 glass rounded-2xl px-3 py-2 flex items-center gap-2 shadow-xl"
+                  className="absolute -top-4 -right-4 rounded-2xl border border-primary/20 bg-background/60 px-3 py-2 backdrop-blur-xl flex items-center gap-2 shadow-xl"
                 >
                   <FileDown className="h-3.5 w-3.5 text-primary" />
                   <span className="text-[10px] font-mono">.PDF</span>
@@ -179,7 +180,7 @@ export function CV() {
           >
             <div
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-5xl h-[88vh] rounded-2xl overflow-hidden border border-border glass shadow-2xl flex flex-col"
+              className="relative w-full max-w-5xl h-[88vh] rounded-2xl overflow-hidden border border-border bg-background/60 backdrop-blur-xl shadow-2xl flex flex-col"
             >
               <div className="flex items-center justify-between px-5 py-3 border-b border-border/60 bg-background/60">
                 <div className="flex items-center gap-2 text-sm font-mono">
@@ -190,7 +191,7 @@ export function CV() {
                   <a
                     href={cvPdfPath}
                     download
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary text-primary-foreground text-xs font-semibold hover:glow transition-all"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary text-primary-foreground text-xs font-semibold hover:shadow-[var(--shadow-glow)] transition-all"
                   >
                     <FileDown className="h-3.5 w-3.5" /> Download
                   </a>

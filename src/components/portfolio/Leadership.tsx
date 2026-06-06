@@ -4,21 +4,27 @@ import { Award, Users, Mic, Leaf } from "lucide-react";
 const items = [
   {
     icon: Users,
-    year: "2025 — present",
-    title: "President, PSTU Research Society",
-    body: "Leading a community of student researchers, organising programs that connect academia to industry.",
+    year: "Mar 2025 — Dec 2025",
+    title: "Founding President, PSTU Research Society",
+    body: "Led research culture programs, including the Journey to Career seminar with bdjobs and supervised hands-on student research pathways.",
   },
   {
     icon: Mic,
-    year: "2025",
+    year: "Jul 2025 — current",
+    title: "Co-founder, Bioinformatics Club, PSTU",
+    body: "Helping run Bioinformatics for Beginners and workshops connecting agricultural and fisheries research with bioinformatics tools.",
+  },
+  {
+    icon: Mic,
+    year: "26 Aug 2025",
     title: "Journey to Career × bdjobs",
     body: "Flagship program in collaboration with Bangladesh's largest job-seeking platform, helping students prepare for the workforce.",
   },
   {
     icon: Leaf,
-    year: "2025",
+    year: "2024",
     title: "Qamarun Agro Farm — 4th Youth Business Conference",
-    body: "Participated in Bangladesh's youth-led agribusiness conversation.",
+    body: "Winner with Team Sabuj Pathik - Green Travelers in a business case study competition.",
   },
   {
     icon: Award,

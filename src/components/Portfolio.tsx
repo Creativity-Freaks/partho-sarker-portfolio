@@ -7,6 +7,8 @@ import { Hero } from "./portfolio/Hero";
 import { About } from "./portfolio/About";
 import { Research } from "./portfolio/Research";
 import { Skills } from "./portfolio/Skills";
+import { Credentials } from "./portfolio/Credentials";
+import { Publications } from "./portfolio/Publications";
 import { Gallery } from "./portfolio/Gallery";
 import { Leadership } from "./portfolio/Leadership";
 import { LabField } from "./portfolio/LabField";
@@ -30,7 +32,9 @@ export function Portfolio() {
       <Nav />
       <Hero speaking={speakingAsset} />
       <About />
+      <Credentials />
       <Research poster={posterAsset} krishi={krishiAsset} />
+      <Publications />
       <Marquee />
       <Skills />
       <Leadership />
@@ -45,8 +49,8 @@ export function Portfolio() {
               <span className="text-gradient">Partho Sarker Dhrubo</span>
             </div>
             <p className="mt-3 text-sm text-muted-foreground max-w-xs">
-              Bioinformatics researcher & agricultural innovator. Building bridges between
-              molecules, data, and farmers.
+              Graduate researcher in soil & molecular biology, connecting coastal agriculture,
+              silicon stress mitigation, and bioinformatics.
             </p>
           </div>
           <div>
@@ -71,8 +75,7 @@ export function Portfolio() {
                 </a>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
-                <MapPin className="h-4 w-4 text-primary" /> Patuakhali Science & Technology
-                University, BD
+                <MapPin className="h-4 w-4 text-primary" /> Gaibandha, Bangladesh · PSTU
               </li>
             </ul>
           </div>

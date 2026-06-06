@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { ExternalLink, FileText, Smartphone } from "lucide-react";
+import { FileText, Smartphone, Sprout } from "lucide-react";
 
 export function Research({ poster, krishi }: { poster: string; krishi: string }) {
   const projects = [
@@ -21,6 +21,14 @@ export function Research({ poster, krishi }: { poster: string; krishi: string })
       venue: "Project poster · Faculty of Agriculture, PSTU",
       icon: Smartphone,
     },
+    {
+      img: poster,
+      tag: "Soil Science · Coastal Agriculture",
+      title: "Silicon mitigation for saline and heavy-metal stressed crop systems",
+      body: "Research experience under BAS-USDA PSTU CC and Bangladesh Academy of Sciences-supported work, focusing on saline soil, nutrient management, treatment application, trait analysis, and crop stress resilience.",
+      venue: "Department of Soil Science · Department of Genetics & Plant Breeding · PSTU",
+      icon: Sprout,
+    },
   ];
 
   return (
@@ -32,8 +40,12 @@ export function Research({ poster, krishi }: { poster: string; krishi: string })
           viewport={{ once: true }}
           className="mb-16"
         >
-          <div className="font-mono text-xs text-primary mb-4">// 02 — SELECTED WORK</div>
+          <div className="font-mono text-xs text-primary mb-4">// 03 — SELECTED WORK</div>
           <h2 className="text-4xl md:text-6xl font-bold">Research & projects</h2>
+          <p className="mt-4 text-muted-foreground max-w-2xl">
+            Updated from the latest CV: coastal soil management, BRRI rice genotype field work,
+            RTC-funded bioinformatics training, and agri-tech concept development.
+          </p>
         </motion.div>
 
         <div className="space-y-10">
