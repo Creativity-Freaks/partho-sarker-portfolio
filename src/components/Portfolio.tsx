@@ -16,6 +16,7 @@ import { CV } from "./portfolio/CV";
 import { Contact } from "./portfolio/Contact";
 import { Nav } from "./portfolio/Nav";
 import { Marquee } from "./portfolio/Marquee";
+import { SocialRail } from "./portfolio/SocialRail";
 import { Mail, Phone, Linkedin, Facebook, MapPin } from "lucide-react";
 
 export function Portfolio() {
@@ -30,6 +31,7 @@ export function Portfolio() {
         className="fixed top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-accent to-primary z-50 origin-left"
       />
       <Nav />
+      <SocialRail />
       <Hero speaking={speakingAsset} />
       <About />
       <Credentials />

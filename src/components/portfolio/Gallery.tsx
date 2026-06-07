@@ -28,173 +28,100 @@ export function Gallery({
   krishi: string;
 }) {
   const shots = [
-    {
-      src: speaking,
-      caption: "Speaking · Journey to Career × bdjobs",
-      note: "Leading a student career session under PSTU Research Society.",
-      span: "md:col-span-2 md:row-span-2",
-    },
-    {
-      src: poster,
-      caption: "Poster · PTC&B Conference, DU 2026",
-      note: "Molecular docking and dynamics work on Fusarium graminearum.",
-      span: "md:col-span-1 md:row-span-2",
-    },
-    {
-      src: certificateAsset,
-      caption: "Certificate · 11th PTC&B Conference",
-      note: "Recognition for international poster presentation at University of Dhaka.",
-      span: "md:col-span-2",
-    },
-    {
-      src: birriFieldAsset,
-      caption: "BIRRI field · Coastal tidal ecosystem",
-      note: "Submergence-tolerant rice genotype field research in Patuakhali.",
-      span: "md:col-span-1",
-    },
-    {
-      src: careerAsset,
-      caption: "Career program · PSTURS × bdjobs",
-      note: "Group moment from the Journey to Career program.",
-      span: "md:col-span-2",
-    },
-    {
-      src: paperPosterAsset,
-      caption: "Research poster · Silicon & stress resilience",
-      note: "Publication-oriented poster work on plant stress and molecular analysis.",
-      span: "md:col-span-1",
-    },
-    {
-      src: krishi,
-      caption: "কৃষিবন্ধু · Agri-mechanization idea",
-      note: "App concept for agricultural transformation and farmer empowerment.",
-      span: "md:col-span-1 md:row-span-2",
-    },
-    {
-      src: teamAwardAsset,
-      caption: "Qamarun Agro Farm · Winning team",
-      note: "Team Sabuj Pathik - Green Travelers at the youth business conference.",
-      span: "md:col-span-2",
-    },
-    {
-      src: businessStageAsset,
-      caption: "Youth business conference · Stage moment",
-      note: "Pitching and presenting in Bangladesh's youth agribusiness space.",
-      span: "md:col-span-1",
-    },
-    {
-      src: awardPortraitAsset,
-      caption: "Award recognition · Case study",
-      note: "Business case study achievement from Qamarun Agro Farm.",
-      span: "md:col-span-1",
-    },
-    {
-      src: posterDiscussionAsset,
-      caption: "Poster discussion · Research communication",
-      note: "Explaining methods, outcomes, and agricultural impact to visitors.",
-      span: "md:col-span-2",
-    },
-    {
-      src: formalPortraitAsset,
-      caption: "Conference portrait · Professional profile",
-      note: "Formal moment from research presentation activities.",
-      span: "md:col-span-1 md:row-span-2",
-    },
-    {
-      src: micSessionAsset,
-      caption: "Seminar microphone · Student leadership",
-      note: "Moderating and speaking during academic and career sessions.",
-      span: "md:col-span-1",
-    },
-    {
-      src: seminarRoomAsset,
-      caption: "Seminar room · Research society program",
-      note: "Student audience during a PSTU learning and networking session.",
-      span: "md:col-span-2",
-    },
-    {
-      src: audienceAsset,
-      caption: "Workshop audience · Campus engagement",
-      note: "Building research culture through repeat student programs.",
-      span: "md:col-span-1",
-    },
-    {
-      src: workshopAsset,
-      caption: "Bioinformatics workshop · Training session",
-      note: "Hands-on learning environment for beginners and research-oriented students.",
-      span: "md:col-span-2",
-    },
-    {
-      src: labInstrumentAsset,
-      caption: "Lab instrument · Chemical analysis",
-      note: "Hands-on lab work supporting soil, plant, and sample analysis.",
-      span: "md:col-span-1",
-    },
-    {
-      src: scannerAsset,
-      caption: "Root scanner · Image analysis",
-      note: "Root trait measurement and data collection for crop physiology.",
-      span: "md:col-span-1",
-    },
-    {
-      src: samplesAsset,
-      caption: "Sample preparation · Lab workflow",
-      note: "Treatment samples and analytical preparation during research work.",
-      span: "md:col-span-1",
-    },
-    {
-      src: greenhouseAsset,
-      caption: "Greenhouse trial · Pot experiment",
-      note: "Controlled plant work for treatment setup and stress-response observation.",
-      span: "md:col-span-2",
-    },
-    {
-      src: fieldDiscussionAsset,
-      caption: "Field discussion · Research coordination",
-      note: "Planning and review moments with research collaborators and students.",
-      span: "md:col-span-1",
-    },
+    { src: speaking, caption: "Speaking · Journey to Career × bdjobs" },
+    { src: poster, caption: "Poster · PTC&B Conference, DU 2026" },
+    { src: certificateAsset, caption: "Certificate · 11th PTC&B Conference" },
+    { src: birriFieldAsset, caption: "BIRRI field · Coastal tidal ecosystem" },
+    { src: careerAsset, caption: "Career program · PSTURS × bdjobs" },
+    { src: paperPosterAsset, caption: "Research poster · Silicon & stress" },
+    { src: krishi, caption: "কৃষিবন্ধু · Agri-mechanization idea" },
+    { src: teamAwardAsset, caption: "Qamarun Agro Farm · Winning team" },
+    { src: businessStageAsset, caption: "Youth business conference" },
+    { src: awardPortraitAsset, caption: "Award recognition · Case study" },
+    { src: posterDiscussionAsset, caption: "Poster discussion" },
+    { src: formalPortraitAsset, caption: "Conference portrait" },
+    { src: micSessionAsset, caption: "Seminar · Student leadership" },
+    { src: seminarRoomAsset, caption: "Seminar room · Research society" },
+    { src: audienceAsset, caption: "Workshop audience" },
+    { src: workshopAsset, caption: "Bioinformatics workshop" },
+    { src: labInstrumentAsset, caption: "AAS operation · Lab instrument" },
+    { src: scannerAsset, caption: "UV-Vis scanner · Lab work" },
+    { src: samplesAsset, caption: "Plant samples · Tissue analysis" },
+    { src: greenhouseAsset, caption: "Greenhouse · Experiment setup" },
+    { src: fieldDiscussionAsset, caption: "Field discussion · Team planning" },
   ];
+
+  const row1 = shots.slice(0, 11);
+  const row2 = shots.slice(11);
+
   return (
-    <section className="relative py-32 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section className="relative py-32 overflow-hidden">
+      <div className="max-w-6xl mx-auto px-6 mb-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-12"
         >
           <div className="font-mono text-xs text-primary mb-4">// 05 — MOMENTS</div>
           <h2 className="text-4xl md:text-6xl font-bold">From the field & stage</h2>
           <p className="mt-4 text-muted-foreground max-w-2xl">
             Field trials, certificates, research posters, lab workflows, workshops, and leadership
-            moments from the updated portfolio archive.
+            moments — continuously scrolling archive.
           </p>
         </motion.div>
-        <div className="grid md:grid-cols-3 gap-4 auto-rows-[200px] md:auto-rows-[260px]">
-          {shots.map((s, i) => (
-            <motion.figure
-              key={i}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              className={`relative overflow-hidden rounded-2xl glass group ${s.span}`}
-            >
-              <img
-                src={s.src}
-                alt={s.caption}
-                onError={(e) => (e.currentTarget.src = "/placeholder.svg")}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-              />
-              <figcaption className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background/95 via-background/70 to-transparent">
-                <div className="text-xs font-mono text-primary">{s.caption}</div>
-                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{s.note}</p>
-              </figcaption>
-            </motion.figure>
-          ))}
-        </div>
+      </div>
+
+      {/* Row 1 — scroll left */}
+      <GalleryRow items={row1} direction="left" />
+
+      {/* Row 2 — scroll right */}
+      <div className="mt-4">
+        <GalleryRow items={row2} direction="right" />
       </div>
     </section>
+  );
+}
+
+function GalleryRow({
+  items,
+  direction,
+}: {
+  items: { src: string; caption: string }[];
+  direction: "left" | "right";
+}) {
+  const doubled = [...items, ...items];
+  const animClass =
+    direction === "left" ? "animate-gallery-scroll" : "animate-gallery-scroll-reverse";
+
+  return (
+    <div
+      className="overflow-hidden"
+      style={{
+        maskImage: "linear-gradient(to right, transparent, black 5%, black 95%, transparent)",
+        WebkitMaskImage: "linear-gradient(to right, transparent, black 5%, black 95%, transparent)",
+      }}
+    >
+      <div className={`flex gap-3 w-max ${animClass}`}>
+        {doubled.map((shot, i) => (
+          <figure
+            key={i}
+            className="relative w-44 h-56 flex-shrink-0 overflow-hidden rounded-xl group"
+          >
+            <img
+              src={shot.src}
+              alt={shot.caption}
+              loading="lazy"
+              onError={(e) => (e.currentTarget.src = "/placeholder.svg")}
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+            <figcaption className="absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+              <span className="text-[10px] font-mono text-primary leading-tight line-clamp-2">
+                {shot.caption}
+              </span>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
   );
 }
