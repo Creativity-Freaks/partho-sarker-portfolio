@@ -7,5 +7,12 @@ import { nitro } from "nitro/vite";
 
 export default defineConfig({
   base: "/",
-  plugins: [tanstackStart(), nitro(), tailwindcss(), react(), tsconfigPaths()],
+  plugins: [
+    tanstackStart(),
+    // Disable Nitro's index.html renderer so TanStack Start's SSR handler serves all routes.
+    nitro({ renderer: false }),
+    tailwindcss(),
+    react(),
+    tsconfigPaths(),
+  ],
 });
