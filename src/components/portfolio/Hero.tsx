@@ -96,7 +96,7 @@ export function Hero({ speaking }: { speaking: string }) {
             {[
               { n: "15+", l: "Bioinformatics tools" },
               { n: "IELTS 7", l: "English proficiency" },
-              { n: "4", l: "Papers & manuscripts" },
+              { n: "4", l: "Manuscripts & conference papers" },
             ].map((s) => (
               <div key={s.l}>
                 <div className="text-2xl md:text-3xl font-display font-bold text-gradient">

@@ -6,29 +6,29 @@ const credentials = [
     icon: BookOpen,
     label: "Education",
     title: "B.Sc. in Agriculture",
-    meta: "Patuakhali Science and Technology University · 2020-2025",
-    body: "Final grade 3.547/4.00 across 180 credits, with a foundation in agricultural science, soil management, plant biotechnology, and research design.",
+    meta: "Patuakhali Science and Technology University · 2020–2025",
+    body: "Five years and 180 credits at PSTU, graduating with a CGPA of 3.547/4.00 — grounded in agricultural science, soil management, plant biotechnology, and hands-on research design.",
   },
   {
     icon: BriefcaseBusiness,
-    label: "Research Assistant",
+    label: "Work",
     title: "BAS-USDA PSTU CC Project",
     meta: "Department of Soil Science · Department of Genetics & Plant Breeding",
-    body: "Worked on saline soil and nutrient management in coastal unfavorable ecosystems, including sample collection, treatment setup, silicon mitigation, trait analysis, and data analysis.",
+    body: "Research assistant on coastal unfavourable ecosystems — saline soil and nutrient management from sample collection and treatment setup through silicon mitigation, trait analysis, and data interpretation.",
   },
   {
     icon: Award,
     label: "Awards",
-    title: "Scholarships & case competition",
+    title: "Scholarships & competition wins",
     meta: "Education Board · BRAC · Qamarun Agro Farm",
-    body: "Received Education Board, BRAC merit, and primary school scholarships; winner with Team Sabuj Pathik at the 4th Youth Business Conference business case study competition.",
+    body: "Education Board, BRAC merit, and primary school scholarships — plus first place with Team Sabuj Pathik at the 4th Youth Business Conference business case study competition.",
   },
   {
     icon: Languages,
     label: "Language",
     title: "English proficiency",
     meta: "IELTS 7.0 · C1",
-    body: "Listening 8.0, Reading 7.0, Speaking 6.5, and Writing 6.0, supporting international research communication and scholarship applications.",
+    body: "Listening 8.0, Reading 7.0, Speaking 6.5, and Writing 6.0 — ready for international research communication, conference presentation, and scholarship applications.",
   },
 ];
 
@@ -40,39 +40,41 @@ export function Credentials() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-14"
+          transition={{ duration: 0.6 }}
+          className="max-w-3xl"
         >
           <div className="font-mono text-xs text-primary mb-4">// 02 — CREDENTIALS</div>
-          <h2 className="text-4xl md:text-6xl font-bold">Education, work & awards</h2>
-          <p className="mt-4 text-muted-foreground max-w-2xl">
-            A compact view of the updated CV: academic record, funded research experience,
-            scholarships, and language readiness.
+          <h2 className="text-4xl md:text-6xl font-bold leading-tight">
+            Grounded in <span className="text-gradient">education</span>, sharpened through{" "}
+            <span className="text-gradient">research</span>, and marked by{" "}
+            <span className="text-gradient">awards</span>.
+          </h2>
+          <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+            My degree at PSTU built the scientific foundation; BAS-USDA funded work took me into
+            coastal field research; and scholarships plus a national case competition affirmed the
+            path I'm building between the lab, the soil, and research leadership.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-5">
+        <div className="mt-16 grid md:grid-cols-2 gap-6">
           {credentials.map((item, i) => (
             <motion.article
               key={item.title}
-              initial={{ opacity: 0, y: 28 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="rounded-2xl border border-border bg-white/5 p-6 hover:border-primary/40 transition-colors"
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="group glass rounded-2xl p-6 hover:border-primary/40 transition-colors"
             >
-              <div className="flex items-start gap-4">
-                <div className="h-11 w-11 shrink-0 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
-                  <item.icon className="h-5 w-5" />
-                </div>
-                <div>
-                  <div className="text-[10px] font-mono uppercase tracking-widest text-primary">
-                    {item.label}
-                  </div>
-                  <h3 className="mt-1 text-xl font-semibold">{item.title}</h3>
-                  <div className="mt-1 text-xs font-mono text-muted-foreground">{item.meta}</div>
-                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
-                </div>
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:bg-primary/20 transition-colors">
+                <item.icon className="h-6 w-6" />
               </div>
+              <div className="text-[10px] font-mono uppercase tracking-widest text-primary">
+                {item.label}
+              </div>
+              <h3 className="mt-1 text-lg font-semibold">{item.title}</h3>
+              <div className="mt-1 text-xs font-mono text-muted-foreground">{item.meta}</div>
+              <p className="mt-4 text-sm text-muted-foreground leading-relaxed">{item.body}</p>
             </motion.article>
           ))}
         </div>

@@ -15,4 +15,11 @@ export default defineConfig({
     react(),
     tsconfigPaths(),
   ],
+<<<<<<< HEAD
 });
+=======
+  build: {
+    outDir: "dist/client"
+  },
+});
+>>>>>>> 7227b42 (updated files dt-6/12/26)

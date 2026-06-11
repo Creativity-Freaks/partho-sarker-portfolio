@@ -9,6 +9,13 @@ const publications = [
     detail: "Bangladesh Journal of Agriculture, 50(1), 1-19 · DOI: 10.3329/bjagri.v50i1.82829",
   },
   {
+    icon: Presentation,
+    status: "Conference paper",
+    title:
+      "Decoding structural stability and ligand binding mechanism of a hypothetical protein from Fusarium graminearum",
+    detail: "11th International PTC&B Conference, University of Dhaka · 24-26 January 2026",
+  },
+  {
     icon: FileClock,
     status: "Under review",
     title: "Silicon supplementation boosts salt resilience in coastal traditional rice",
@@ -28,13 +35,6 @@ const publications = [
       "Comparative effectiveness of basal and foliar silicon application on wheat productivity in coastal saline-prone soils",
     detail: "Journal of Soil Science and Plant Nutrition · EMID: 6e17009eea1db52b",
   },
-  {
-    icon: Presentation,
-    status: "Poster",
-    title:
-      "Decoding structural stability and ligand binding mechanism of a hypothetical protein from Fusarium graminearum",
-    detail: "11th International PTC&B Conference, University of Dhaka · 24-26 January 2026",
-  },
 ];
 
 export function Publications() {
@@ -48,10 +48,11 @@ export function Publications() {
           className="mb-14"
         >
           <div className="font-mono text-xs text-primary mb-4">// 04 — PUBLICATIONS</div>
-          <h2 className="text-4xl md:text-6xl font-bold">Papers & manuscripts</h2>
+          <h2 className="text-4xl md:text-6xl font-bold">Manuscripts & conference papers</h2>
           <p className="mt-4 text-muted-foreground max-w-2xl">
-            Published and under-review work across silicon-mediated stress tolerance, coastal
-            agriculture, and computational protein characterization.
+            Published articles, conference presentations, and under-review manuscripts across
+            silicon-mediated stress tolerance, coastal agriculture, and computational protein
+            characterization.
           </p>
         </motion.div>
 

@@ -1,8 +1,17 @@
 import { motion } from "motion/react";
 import { FileText, Smartphone, Sprout } from "lucide-react";
+import labWorkAsset from "@/assets/WhatsApp Image 2026-05-19 at 10.20.18 PM.jpeg";
 
 export function Research({ poster, krishi }: { poster: string; krishi: string }) {
   const projects = [
+    {
+      img: labWorkAsset,
+      tag: "Soil Science · Coastal Agriculture",
+      title: "Silicon mitigation for saline and heavy-metal stressed crop systems",
+      body: "Research experience under BAS-USDA PSTU CC and Bangladesh Academy of Sciences-supported work, focusing on saline soil, nutrient management, treatment application, trait analysis, and crop stress resilience.",
+      venue: "Department of Soil Science · Department of Genetics & Plant Breeding · PSTU",
+      icon: Sprout,
+    },
     {
       img: poster,
       tag: "Bioinformatics · Molecular Docking",
@@ -20,14 +29,6 @@ export function Research({ poster, krishi }: { poster: string; krishi: string })
       body: "A concept platform aggregating weather advisories, market prices, pest diagnostics, and treatment guidance directly into farmers' hands — bridging extension services with mobile technology.",
       venue: "Project poster · Faculty of Agriculture, PSTU",
       icon: Smartphone,
-    },
-    {
-      img: poster,
-      tag: "Soil Science · Coastal Agriculture",
-      title: "Silicon mitigation for saline and heavy-metal stressed crop systems",
-      body: "Research experience under BAS-USDA PSTU CC and Bangladesh Academy of Sciences-supported work, focusing on saline soil, nutrient management, treatment application, trait analysis, and crop stress resilience.",
-      venue: "Department of Soil Science · Department of Genetics & Plant Breeding · PSTU",
-      icon: Sprout,
     },
   ];
 
