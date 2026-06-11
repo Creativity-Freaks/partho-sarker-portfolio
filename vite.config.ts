@@ -10,16 +10,10 @@ export default defineConfig({
   plugins: [
     tanstackStart(),
     // Disable Nitro's index.html renderer so TanStack Start's SSR handler serves all routes.
-    nitro({ renderer: false }),
+    // Use vercel preset for proper Vercel deployment.
+    nitro({ renderer: false, preset: "vercel" }),
     tailwindcss(),
     react(),
     tsconfigPaths(),
   ],
-<<<<<<< HEAD
 });
-=======
-  build: {
-    outDir: "dist/client"
-  },
-});
->>>>>>> 7227b42 (updated files dt-6/12/26)

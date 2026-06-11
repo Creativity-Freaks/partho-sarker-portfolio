@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vite dev",
     "build:dev": "vite build --mode development",
-    "build": "vite build && nitro build",
-    "preview": "node dist/server/server.js",
+    "build": "vite build",
+    "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write ."
   },
