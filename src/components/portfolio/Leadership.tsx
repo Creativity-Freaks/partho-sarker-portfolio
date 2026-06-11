@@ -30,7 +30,7 @@ const items = [
     icon: Award,
     year: "2026",
     title: "Poster presenter — 11th PTC&B Conference, DU",
-    body: "Presented bioinformatics research on molecular docking & dynamics simulations at the University of Dhaka.",
+    body: "Presented bioinformatics research on computational biology & dynamics simulations at the University of Dhaka.",
   },
 ];
 

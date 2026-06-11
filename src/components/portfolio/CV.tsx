@@ -1,15 +1,6 @@
 import { motion } from "motion/react";
 import { useState } from "react";
-import {
-  FileDown,
-  FileText,
-  Eye,
-  GraduationCap,
-  FlaskConical,
-  Award,
-  Users,
-  X,
-} from "lucide-react";
+import { Mail, FileText, Eye, GraduationCap, FlaskConical, Award, Users, X } from "lucide-react";
 
 const highlights = [
   { icon: GraduationCap, label: "Education", value: "B.Sc. Agriculture · CGPA 3.547" },
@@ -77,12 +68,11 @@ export function CV() {
 
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
-                  href={cvPdfPath}
-                  download
+                  href="mailto:parthodhrubopstu@gmail.com?subject=CV%20Request%20%E2%80%94%20Partho%20Sarker%20Dhrubo&body=Hi%20Partho%2C%0AI%20would%20like%20to%20request%20a%20copy%20of%20your%20CV.%20Thank%20you!"
                   className="group inline-flex items-center gap-3 px-7 py-3.5 rounded-full bg-primary text-primary-foreground font-semibold text-sm hover:shadow-[var(--shadow-glow)] transition-all"
                 >
-                  <FileDown className="h-5 w-5 group-hover:translate-y-0.5 transition-transform" />
-                  Download CV (PDF)
+                  <Mail className="h-5 w-5 group-hover:translate-y-0.5 transition-transform" />
+                  Request CV via Email
                 </a>
                 <button
                   type="button"
@@ -96,7 +86,7 @@ export function CV() {
 
               <div className="mt-6 flex items-center gap-2 text-xs text-muted-foreground">
                 <FileText className="h-3.5 w-3.5" />
-                <span>4 pages · Last updated June 2026</span>
+                <span>4 pages · Last updated June 2026 · Available on request</span>
               </div>
             </div>
 
@@ -158,15 +148,15 @@ export function CV() {
                   </div>
                 </div>
 
-                {/* Floating download badge */}
+                {/* Floating request badge */}
                 <motion.div
                   animate={{ y: [0, -8, 0] }}
                   transition={{ duration: 3, repeat: Infinity }}
                   style={{ transform: "translateZ(40px)" }}
                   className="absolute -top-4 -right-4 rounded-2xl border border-primary/20 bg-background/60 px-3 py-2 backdrop-blur-xl flex items-center gap-2 shadow-xl"
                 >
-                  <FileDown className="h-3.5 w-3.5 text-primary" />
-                  <span className="text-[10px] font-mono">.PDF</span>
+                  <Mail className="h-3.5 w-3.5 text-primary" />
+                  <span className="text-[10px] font-mono">On Request</span>
                 </motion.div>
               </motion.div>
             </div>
@@ -188,13 +178,6 @@ export function CV() {
                   CV of Partho Sarker Dhrubo, Bangladesh.pdf
                 </div>
                 <div className="flex items-center gap-2">
-                  <a
-                    href={cvPdfPath}
-                    download
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary text-primary-foreground text-xs font-semibold hover:shadow-[var(--shadow-glow)] transition-all"
-                  >
-                    <FileDown className="h-3.5 w-3.5" /> Download
-                  </a>
                   <button
                     onClick={() => setOpen(false)}
                     aria-label="Close preview"

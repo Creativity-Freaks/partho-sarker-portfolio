@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 
 const items = [
-  { icon: Dna, label: "Molecular Docking" },
+  { icon: Dna, label: "Computational Biology" },
   { icon: Network, label: "Phylogenetics" },
   { icon: FlaskConical, label: "AAS Operation" },
   { icon: Leaf, label: "Plant Biotechnology" },
