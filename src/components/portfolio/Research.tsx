@@ -14,7 +14,7 @@ export function Research({ poster, krishi }: { poster: string; krishi: string })
     },
     {
       img: poster,
-      tag: "Bioinformatics · Molecular Docking",
+      tag: "Bioinformatics · Computational Biology",
       title:
         "Decoding structural stability & ligand binding of a hypothetical protein from Fusarium graminearum",
       body: "First in-depth computational analysis of YP_001249320.1 — combining homology modelling, 250 ns MD simulations, and docking with eight flavonoid derivatives. Identified MOLPORT-003-935-831 as a top-performing binder (-8.5 kcal/mol).",
@@ -49,33 +49,35 @@ export function Research({ poster, krishi }: { poster: string; krishi: string })
           </p>
         </motion.div>
 
-        <div className="space-y-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((p, i) => (
             <motion.article
               key={p.title}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.7 }}
-              className={`grid md:grid-cols-2 gap-8 items-center ${i % 2 ? "md:[&>*:first-child]:order-2" : ""}`}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="glass rounded-2xl overflow-hidden group"
             >
-              <div className="relative aspect-[4/5] md:aspect-[3/4] rounded-2xl overflow-hidden glass group">
+              <div className="relative aspect-[4/3] overflow-hidden">
                 <img
                   src={p.img}
                   alt={p.title}
                   onError={(e) => (e.currentTarget.src = "/placeholder.svg")}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-              </div>
-              <div>
-                <div className="inline-flex items-center gap-2 text-xs font-mono text-accent mb-4">
-                  <p.icon className="h-3.5 w-3.5" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                <div className="absolute bottom-3 left-3 inline-flex items-center gap-1.5 text-[10px] font-mono text-accent bg-background/60 backdrop-blur-sm px-2 py-1 rounded-full">
+                  <p.icon className="h-3 w-3" />
                   {p.tag}
                 </div>
-                <h3 className="text-2xl md:text-4xl font-bold leading-tight">{p.title}</h3>
-                <p className="mt-4 text-muted-foreground leading-relaxed">{p.body}</p>
-                <div className="mt-6 text-xs font-mono text-muted-foreground border-l-2 border-primary/40 pl-4">
+              </div>
+              <div className="p-5">
+                <h3 className="text-lg font-bold leading-snug">{p.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed line-clamp-3">
+                  {p.body}
+                </p>
+                <div className="mt-4 text-[10px] font-mono text-muted-foreground border-l-2 border-primary/40 pl-3">
                   {p.venue}
                 </div>
               </div>

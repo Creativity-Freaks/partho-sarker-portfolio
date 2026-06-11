@@ -21,7 +21,6 @@ const groups = [
       "Ramachandran plot",
       "Multiple sequence alignment",
       "Structural modelling",
-      "Molecular docking",
     ],
   },
   {
@@ -51,11 +50,14 @@ const groups = [
     label: "Professional",
     dotClass: "bg-gold",
     items: [
+      "Python",
       "Basic R programming",
       "Zotero",
       "EndNote",
       "Graphic design",
       "Photoshop",
+      "Canva",
+      "ImageJ",
       "AI tools",
       "Pesticide application technology",
       "Youth wellbeing facilitation",
