@@ -74,14 +74,14 @@ export function CV() {
                   <Mail className="h-5 w-5 group-hover:translate-y-0.5 transition-transform" />
                   Request CV via Email
                 </a>
-                <button
+                {/* <button
                   type="button"
                   onClick={() => setOpen(true)}
                   className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-border hover:border-primary/50 hover:bg-white/5 font-medium text-sm transition-all"
                 >
                   <Eye className="h-4 w-4" />
                   Preview Online
-                </button>
+                </button> */}
               </div>
 
               <div className="mt-6 flex items-center gap-2 text-xs text-muted-foreground">

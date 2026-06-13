@@ -109,17 +109,17 @@ export function Portfolio() {
                 <Mail className="h-4 w-4" />
               </a>
             </div>
-            <a
+            {/* <a
               href="/CV%20of%20Partho%20Sarker%20Dhrubo,%20Bangladesh.pdf"
               download
               className="mt-5 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-primary-foreground text-xs font-semibold hover:glow transition-all"
             >
               Download CV
-            </a>
+            </a> */}
           </div>
         </div>
         <div className="border-t border-border/40 py-5 text-center text-xs text-muted-foreground">
-          © 2026 Partho Sarker Dhrubo · Crafted with curiosity & code
+          © 2026 Partho Sarker Dhrubo · Designed by <a href="https://www.hcsarker.me" target="_blank" rel="noreferrer" className="underline hover:text-primary transition-colors"> hcsarker </a>
         </div>
       </footer>
     </div>
