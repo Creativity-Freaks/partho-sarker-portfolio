@@ -119,7 +119,7 @@ export function Portfolio() {
           </div>
         </div>
         <div className="border-t border-border/40 py-5 text-center text-xs text-muted-foreground">
-          © 2026 Partho Sarker Dhrubo · Designed by <a href="https://www.hcsarker.me" target="_blank" rel="noreferrer" className="underline hover:text-primary transition-colors"> hcsarker </a>
+          © 2026 Partho Sarker Dhrubo · Designed by <a href="https://www.hcsarker.me" target="_blank" rel="noreferrer" className="underline hover:text-primary transition-colors"> <span className="text-primary">hcsarker</span> </a>
         </div>
       </footer>
     </div>
