@@ -9,6 +9,15 @@ const publications = [
     detail: "Bangladesh Journal of Agriculture, 50(1), 1-19 · DOI: 10.3329/bjagri.v50i1.82829",
   },
   {
+    icon: FileCheck2,
+    status: "Published",
+    title:
+      "Silicon Supplementation Boosts Salt Resilience of Traditional Rice Varieties by Ionic Regulation and Nutrient Balance",
+    detail:
+      "Journal of Patuakhali Science and Technology University, 3(1), 1-15 · DOI: 10.3329/jpstu.v3i1.82829",
+    link: "https://journal.pstu.ac.bd/public/storage/papers/1784010977_Shanta%20et%20al._JPSTU%20revised%20(2)%20with%20discussion%20part%20(2).pdf",
+  },
+  {
     icon: Presentation,
     status: "Conference paper",
     title:
@@ -18,8 +27,9 @@ const publications = [
   {
     icon: FileClock,
     status: "Under review",
-    title: "Silicon supplementation boosts salt resilience in coastal traditional rice",
-    detail: "Heliyon · Manuscript HELIYON-D-25-11148",
+    title:
+      "Integrated effects of different root-zone hydration and moisture conservation techniques on survival, growth and physiological performance of young tea plants (Camellia sinensis L.) during drought stress",
+    detail: "Field Crops Research · Manuscript FIELD-D-26-02635",
   },
   {
     icon: FileClock,
@@ -73,6 +83,17 @@ export function Publications() {
               <div>
                 <h3 className="text-lg font-semibold leading-snug">{paper.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{paper.detail}</p>
+                {"link" in paper && (
+                  <a
+                    href={paper.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-3 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-3 py-1.5 text-xs font-medium text-primary transition-colors hover:border-primary/50 hover:bg-primary/15"
+                  >
+                    View paper
+                    <span className="font-mono text-[10px] opacity-80">PDF</span>
+                  </a>
+                )}
               </div>
             </motion.article>
           ))}

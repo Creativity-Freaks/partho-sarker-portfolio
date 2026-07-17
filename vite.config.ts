@@ -7,6 +7,14 @@ import { nitro } from "nitro/vite";
 
 export default defineConfig({
   base: "/",
+  server: {
+    watch: {
+      // Reduce native file watchers in constrained environments.
+      ignored: ["**/*.md", "**/PROJECT_SUMMARY.md"],
+      usePolling: true,
+      interval: 1000,
+    },
+  },
   plugins: [
     tanstackStart(),
     // Disable Nitro's index.html renderer so TanStack Start's SSR handler serves all routes.
