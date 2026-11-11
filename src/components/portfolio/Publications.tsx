@@ -1,12 +1,24 @@
 import { motion } from "motion/react";
-import { FileCheck2, FileClock, Presentation } from "lucide-react";
+import { FileCheck2, FileClock, Presentation, FileText } from "lucide-react";
 
-const publications = [
+interface PublicationItem {
+  icon: typeof FileCheck2;
+  status: "Published" | "Conference paper" | "Preprint" | "Under review";
+  title: string;
+  detail: string;
+  authors?: string;
+  link?: string;
+  linkBadge?: string;
+}
+
+const publications: PublicationItem[] = [
   {
     icon: FileCheck2,
     status: "Published",
     title: "Remediation of lead toxicity by exogenous application of silicon in rice",
     detail: "Bangladesh Journal of Agriculture, 50(1), 1-19 · DOI: 10.3329/bjagri.v50i1.82829",
+    link: "https://doi.org/10.3329/bjagri.v50i1.82829",
+    linkBadge: "DOI",
   },
   {
     icon: FileCheck2,
@@ -16,6 +28,17 @@ const publications = [
     detail:
       "Journal of Patuakhali Science and Technology University, 3(1), 1-15 · DOI: 10.3329/jpstu.v3i1.82829",
     link: "https://journal.pstu.ac.bd/public/storage/papers/1784010977_Shanta%20et%20al._JPSTU%20revised%20(2)%20with%20discussion%20part%20(2).pdf",
+    linkBadge: "PDF",
+  },
+  {
+    icon: FileCheck2,
+    status: "Published",
+    title:
+      "Comparative effectiveness of soil and foliar application of different silicon sources on wheat productivity in coastal soils of the Ganges delta",
+    authors: "MM Soha, PS Dhrubo, FN Lamia, UNM Paul, MF Al-Nahid, MA Haque",
+    detail: "Discover Plants, 3(1), Article 1028 · DOI: 10.1007/s44372-026-01028-7",
+    link: "https://doi.org/10.1007/s44372-026-01028-7",
+    linkBadge: "DOI",
   },
   {
     icon: Presentation,
@@ -25,11 +48,14 @@ const publications = [
     detail: "11th International PTC&B Conference, University of Dhaka · 24-26 January 2026",
   },
   {
-    icon: FileClock,
-    status: "Under review",
+    icon: FileText,
+    status: "Preprint",
     title:
-      "Integrated effects of different root-zone hydration and moisture conservation techniques on survival, growth and physiological performance of young tea plants (Camellia sinensis L.) during drought stress",
-    detail: "Field Crops Research · Manuscript FIELD-D-26-02635",
+      "Improved root-zone hydration and soil moisture conservation enhance drought resilience during the establishment of young tea plants (Camellia sinensis L.)",
+    authors: "MMR Akonda, MS Islam, PS Dhrubo, AKMR Hoque, MA Aziz, T Ahmed",
+    detail: "Research Square · DOI: 10.21203/rs.3.rs-10635804/v1",
+    link: "https://doi.org/10.21203/rs.3.rs-10635804/v1",
+    linkBadge: "Preprint",
   },
   {
     icon: FileClock,
@@ -37,13 +63,6 @@ const publications = [
     title:
       "In silico structural and functional characterization of an uncharacterized protein from Arabidopsis thaliana involved in phosphate transport",
     detail: "Journal of Genetic Engineering and Biotechnology · Manuscript JGEBIO-D-26-00036",
-  },
-  {
-    icon: FileClock,
-    status: "Under review",
-    title:
-      "Comparative effectiveness of basal and foliar silicon application on wheat productivity in coastal saline-prone soils",
-    detail: "Journal of Soil Science and Plant Nutrition · EMID: 6e17009eea1db52b",
   },
 ];
 
@@ -60,7 +79,7 @@ export function Publications() {
           <div className="font-mono text-xs text-primary mb-4">// 04 — PUBLICATIONS</div>
           <h2 className="text-4xl md:text-6xl font-bold">Manuscripts & conference papers</h2>
           <p className="mt-4 text-muted-foreground max-w-2xl">
-            Published articles, conference presentations, and under-review manuscripts across
+            Published articles, preprints, conference presentations, and under-review manuscripts across
             silicon-mediated stress tolerance, coastal agriculture, and computational protein
             characterization.
           </p>
@@ -82,8 +101,13 @@ export function Publications() {
               </div>
               <div>
                 <h3 className="text-lg font-semibold leading-snug">{paper.title}</h3>
+                {paper.authors && (
+                  <p className="mt-1 text-xs text-muted-foreground/80 font-mono">
+                    <span className="text-primary/70">Authors:</span> {paper.authors}
+                  </p>
+                )}
                 <p className="mt-2 text-sm text-muted-foreground">{paper.detail}</p>
-                {"link" in paper && (
+                {paper.link && (
                   <a
                     href={paper.link}
                     target="_blank"
@@ -91,7 +115,9 @@ export function Publications() {
                     className="mt-3 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-3 py-1.5 text-xs font-medium text-primary transition-colors hover:border-primary/50 hover:bg-primary/15"
                   >
                     View paper
-                    <span className="font-mono text-[10px] opacity-80">PDF</span>
+                    <span className="font-mono text-[10px] opacity-80">
+                      {paper.linkBadge || "PDF"}
+                    </span>
                   </a>
                 )}
               </div>
